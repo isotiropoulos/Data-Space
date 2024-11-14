@@ -1,0 +1,14 @@
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+kubectl create namespace ids-2
+kubectl apply -f ./Nginx/4-ingress-connection-nginx.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Broker/0-broker-core-services.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Broker/1-broker-core-deployment.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Broker/2-daps-broker-confimap.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Connectors/0-connectors-services.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Connectors/1-connectorA.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Connectors/1-connectorB.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Connectors/2-connectors-configmap.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Connectors/3-connectors-secrets.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Omejdn/0-omejdn-services.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Omejdn/1-omejdn-deployments.yaml -n ids-2
+kubectl apply -f ./idsa_manifest_local/Omejdn/2-omejdn-configmap.yaml -n ids-2

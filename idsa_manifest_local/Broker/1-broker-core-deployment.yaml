@@ -34,8 +34,8 @@ spec:
         - name: SPARQL_ENDPOINT
           value: http://broker-fuseki:3030/connectorData
 
-        image: ghcr.io/flexigrobots-h2020/broker-core:latest
-
+        # image: ghcr.io/flexigrobots-h2020/broker-core:latest
+        image : registry.gitlab.cc-asp.fraunhofer.de/eis-ids/broker-open/core:5.0.0
         name: broker-core
         ports:
         - containerPort: 8080
